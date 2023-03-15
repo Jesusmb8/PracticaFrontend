@@ -1,0 +1,16 @@
+.advertisement-list{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.addvertisement{
+    width: 300px;
+    height:300px;
+}
+
+.img-advertisement{
+    max-width: 300px;
+    max-height:300px;
+}

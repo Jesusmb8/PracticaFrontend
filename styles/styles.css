@@ -23,3 +23,12 @@ h4 {
 h5 {
     font-size: 1.125em;
 }
+
+form#newUser,
+form#loginUser {
+    display: flex;
+    flex-direction: column;
+}
+input{
+    max-width: 50%;
+}

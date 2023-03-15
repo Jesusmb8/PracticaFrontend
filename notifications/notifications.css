@@ -1,14 +1,25 @@
-.notifications{
+.notifications {
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 25%;
     background-color: white;
     z-index: 1;
     border-radius: 20px;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .1);
     width: 50%;
     background-color: #ffffff;
 }
-.notifications>p{
+
+.notifications>p {
     padding: 20px;
+}
+
+.bg-green{
+    background-color: rgb(119, 209, 111);
+}
+.bg-blue{
+    background-color: rgb(121, 163, 226);
+}
+.bg-red{
+    background-color: rgb(243, 131, 131);
 }

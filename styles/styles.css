@@ -25,7 +25,8 @@ h5 {
 }
 
 form#newUser,
-form#loginUser {
+form#loginUser,
+form#newAdvertisement {
     display: flex;
     flex-direction: column;
 }

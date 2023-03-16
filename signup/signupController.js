@@ -1,4 +1,5 @@
 import { pubSub } from "../pubSub.js";
+import { isEmailValid } from "../utils/isEmailValid.js";
 import { createUser } from "./singupModel.js";
 
 export function signupController(singupForm) {
@@ -11,7 +12,8 @@ export function signupController(singupForm) {
         const passwElement = singupForm.querySelector('#password');
         const passwConfirmElement = singupForm.querySelector('#passwordConfirm');
         // TODO, COMPROBAR EMAIL y password
-        if (true) {
+        if (isEmailValid(emailElement.value) &&
+            isPasswordValid(passwElement.value, passwConfirmElement.value)) {
             try {
                 await createUser(emailElement.value, passwElement.value);
                 pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {
@@ -20,11 +22,23 @@ export function signupController(singupForm) {
                 })
             } catch (error) {
                 pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {
-                    message: 'El usuario no ha sido creado',
+                    message: 'El usuario no ha sido creado: ' + error.message,
                     bgColor: 'bg-red'
                 })
             }
 
         }
     })
+}
+
+function isPasswordValid(password, passwordConfirmation) {
+    if (password !== passwordConfirmation) {
+        pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {
+            message: 'Las contraseñas no son iguales',
+            bgColor: 'bg-red'
+        })
+        return false
+    }
+
+    return true
 }

@@ -29,6 +29,8 @@ form#loginUser {
     display: flex;
     flex-direction: column;
 }
-input{
+
+/* Width */
+.maxWidth50{
     max-width: 50%;
 }

@@ -17,12 +17,12 @@ export function loginController(loginForm) {
                 bgColor: 'bg-red'
             })
         } else {
-            createUser(loginForm);
+            loginUser(loginForm);
         }
     })
 }
 
-async function createUser(loginForm) {
+async function loginUser(loginForm) {
     const formData = new FormData(loginForm);
     const user = formData.get('user');
     const pass = formData.get('password');
@@ -30,7 +30,7 @@ async function createUser(loginForm) {
     try {
         const token = await loginModel(user, pass);
         localStorage.setItem('token', token);
-        window.location= '/PracticaFrontend/';
+        window.location= '/';
 
     } catch (error) {
         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {

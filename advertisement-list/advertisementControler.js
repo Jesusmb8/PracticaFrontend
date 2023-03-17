@@ -1,6 +1,7 @@
 import { pubSub } from "../pubSub.js";
+import { buildSpinnerView, hideSpinner } from "../utils/spinner.js";
 import { getAdvertisement } from "./advertisementModel.js";
-import { buildAdvertisementView, buildSpinnerView } from "./advertisementView.js";
+import { buildAdvertisementView } from "./advertisementView.js";
 
 export async function advertisementListController(advertisementListElement) {
     // Loading
@@ -22,7 +23,7 @@ export async function advertisementListController(advertisementListElement) {
             bgColor: 'bg-red'
         }
         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, notification);
-    }finally{
+    } finally {
         hideSpinner(advertisementListElement);
     }
 }
@@ -35,7 +36,3 @@ function drawAdvertisement(advertisements, advertisementListElement) {
     }
 }
 
-function hideSpinner(tweetListElement) {
-    const spinnerElement = tweetListElement.querySelector('.spinner');
-    spinnerElement.classList.add('hide');
-    }

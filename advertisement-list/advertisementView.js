@@ -3,7 +3,7 @@ export function buildAdvertisementView(advertisement){
     newAdvertisementElement.classList.add('advertisement');
 
     newAdvertisementElement.innerHTML=`
-        <a href="/detail.html?advertisementId=${advertisement.id}">
+        <a href="/advertisementDetail.html?advertisementId=${advertisement.id}">
             <h2>${advertisement.descripcion}</h2>
             <h3>${advertisement.precio}</h3>
             <img alt="Imagen anuncio" class="img-advertisement" src=${advertisement.imagen}>
@@ -11,9 +11,4 @@ export function buildAdvertisementView(advertisement){
     `;
 
     return newAdvertisementElement;
-}
-
-export function buildSpinnerView(){
-    return `<div class="spinner"><div></div><div></div><div></div></div>`
-
 }

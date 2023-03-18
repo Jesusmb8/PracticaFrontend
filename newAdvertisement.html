@@ -8,34 +8,37 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/spinner.css">
     <link rel="stylesheet" href="./notifications/notifications.css">
+    <link rel="stylesheet" href="./new-advertisement/newAdvertisement.css">
 
     <title>Nuevo anuncio</title>
 </head>
 
 <body>
     <section class="notifications"></section>
-    <form id="newAdvertisement">
-
-        <label for="foto">Foto</label>
-        <input type="text" id="foto" name="foto" placeholder="Introduza url: http://....">
-        <br>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Introduzca el nombre del artículo" required>
-        <br>
-        <label for="descripcion">Descripción</label>
-        <input type="text" id="descripcion" name="descripcion" placeholder="Describe elartículo" required>
-        <br>
-        <label for="precio">Precio</label>
-        <input type="number" id="precio" name="precio" step="0.01" required>
-        <br>
-        <label for="tipo">Tipo</label>
-        <select name="tipo" id="tipo" required>
-            <option value="compra">Compra</option>
-            <option value="venta">Venta</option>
-        </select>
-        <br>
-        <button type="submit"> Crear anuncio</button>
-    </form>
+    <section class="form-container">
+        <form id="newAdvertisement">
+    
+            <label for="foto">Foto</label>
+            <input type="text" id="foto" name="foto" placeholder="Introduza url: http://....">
+            <br>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduzca el nombre del artículo" required>
+            <br>
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" name="descripcion" placeholder="Describe elartículo" required>
+            <br>
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+            <br>
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo" required>
+                <option value="compra">Compra</option>
+                <option value="venta">Venta</option>
+            </select>
+            <br>
+            <button type="submit"> Crear anuncio</button>
+        </form>
+    </section>
     <script type="module" src="./new-advertisement/index.js"></script>
 
 </body>

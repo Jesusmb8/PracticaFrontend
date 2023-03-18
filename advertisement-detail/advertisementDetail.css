@@ -1,0 +1,14 @@
+.advertisement-container{
+    display: flex;
+}
+.advertisement-detail{
+    margin: 0 auto;
+}
+.img-advertisement{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.description{
+    font-style: italic;
+}

@@ -26,6 +26,7 @@ export async function advertisementDetailController(advertisementDetailElement, 
             bgColor: 'bg-red'
         }
         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, notification);
+        setTimeout(() => window.location = "/", 5000);
     } finally {
         hideSpinner(advertisementDetailElement);
     }
@@ -51,13 +52,14 @@ function hadldleDeleteAdvertisementButton(advertisementDetailElement, advertisem
                             bgColor: 'bg-green'
                         }
                         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, notification);
-                        setTimeout(() => window.location = "/", 5000);
                     } catch (error) {
                         const notification = {
                             message: error,
                             bgColor: 'bg-red'
                         }
                         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, notification);
+                    }finally{
+                        setTimeout(() => window.location = "/", 5000);
                     }
                 }
             })

@@ -11,7 +11,6 @@ export function signupController(singupForm) {
         const emailElement = singupForm.querySelector('#user');
         const passwElement = singupForm.querySelector('#password');
         const passwConfirmElement = singupForm.querySelector('#passwordConfirm');
-        // TODO, COMPROBAR EMAIL y password
         if (isEmailValid(emailElement.value) &&
             isPasswordValid(passwElement.value, passwConfirmElement.value)) {
             try {
@@ -25,6 +24,8 @@ export function signupController(singupForm) {
                     message: 'El usuario no ha sido creado: ' + error.message,
                     bgColor: 'bg-red'
                 })
+            }finally{
+                setTimeout(() => window.location = "/", 5000);
             }
 
         }

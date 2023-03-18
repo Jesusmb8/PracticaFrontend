@@ -1,3 +1,14 @@
+:root {
+    --first-color: #F9F7F7;
+    --second-color: #DBE2EF;
+    --third-color: #3F72AF;
+    --fourth-color: #112D4E;
+}
+
+/* colores de https://colorhunt.co/palette/3a98b9fff1dce8d5c4eeeeee 
+https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e
+*/
+
 /* Font size */
 body {
     font-size: 16px;
@@ -24,6 +35,29 @@ h5 {
     font-size: 1.125em;
 }
 
+
+/* Header */
+header {
+    background-color: var(--third-color);
+    padding-bottom: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--second-color);
+    padding-bottom: 20px;
+}
+
+/* Main */
+main {
+    background-color: var(--first-color);
+    padding-bottom: 20px;
+}
+/* Footer */
+footer {
+    background-color: var(--third-color);
+}
+
 form#newUser,
 form#loginUser,
 form#newAdvertisement {
@@ -32,6 +66,28 @@ form#newAdvertisement {
 }
 
 /* Width */
-.maxWidth50{
+.maxWidth50 {
     max-width: 50%;
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer>a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Colores */
+.venta{
+    color: green;
+}
+.compra{
+    color: red;
 }

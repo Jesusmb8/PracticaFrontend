@@ -7,23 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallapop</title>
     <!-- Styles css -->
-    <!-- <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css"> -->
-    <link rel="stylesheet" href="./advertisement-list/advertisement.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./notifications/notifications.css">
     <link rel="stylesheet" href="./styles/spinner.css">
+    <link rel="stylesheet" href="./advertisement-list/advertisement.css">
 </head>
 
 <body>
-    <h1>Welcome to wallapop</h1>
-    <section class="user-actions">
-        <a href="./login.html" id="login"> Login</a>
-        <a href="./signup.html" id="signup">Signup</a>
-        <a href="./newAdvertisement.html" id="createAdvertisement">Publica tu anuncio</a>
-        <button id="closeSession">Logout</button>
-    </section>
+    <header class="header">
+        <section>
+            <h1>Welcome to wallapop</h1>
+        </section>
+    </header>
+    <nav class="navbar">
+        <section class="user-actions">
+            <a href="./login.html" id="login"> Login</a>
+            <a href="./signup.html" id="signup">Signup</a>
+            <a href="./newAdvertisement.html" id="createAdvertisement">Publica tu anuncio</a>
+            <button id="closeSession">Logout</button>
+        </section>
+    </nav>
     <section class="notifications"></section>
-    <section class="advertisement-list"></section>
+    <main>
+        <section class="advertisement-list"></section>
+    </main>
+    <footer>
+        <a href="https://www.linkedin.com/in/jmorenobelinchon/" rel="noreferrer noopener">
+            <img src="./icons/linkedin.png" alt="">
+        </a>
+        <a href="https://github.com/Jesusmb8" rel="noreferrer noopener">
+            <img src="./icons/github.png" alt="">
+        </a>
+    </footer>
 
     <script type="module" src="./index.js"></script>
 </body>

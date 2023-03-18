@@ -2,7 +2,7 @@ import { notificationController } from "../notifications/notificationsController
 import { advertisementDetailController } from "./advertisementDetailController.js";
 
 
-const advertisementDetailElement = document.querySelector('.advertisement-detail');
+const advertisementDetailElement = document.querySelector('.advertisement-container');
 const notificationsElement = document.querySelector('.notifications');
 
 const params = new URLSearchParams(window.location.search)

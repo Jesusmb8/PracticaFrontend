@@ -1,6 +1,8 @@
+import { decodeToken } from "../utils/decodeToken.js";
+import { buildUserInfo } from "./userActionsView.js";
 
 
-export function userActionController(userElement){
+export function userActionController(userElement) {
 
     const token = localStorage.getItem('token');
     const closeElement = userElement.querySelector('#closeSession');
@@ -11,9 +13,9 @@ export function userActionController(userElement){
         const singupElement = userElement.querySelector('#signup');
         loginElement.remove();
         singupElement.remove();
-
-        // TODO: poner mensaje personalizado para el usuario, a través del token.
-        closeElement.addEventListener('click', ()=>{
+        const tokenDecoded = decodeToken(token);
+        userElement.appendChild(buildUserInfo(tokenDecoded.username));
+        closeElement.addEventListener('click', () => {
             localStorage.removeItem('token');
             window.location.reload();
         })

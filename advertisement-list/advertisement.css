@@ -1,16 +1,26 @@
 .advertisement-list{
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     /* align-items: center; */
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
-.addvertisement{
+.advertisement a{
+    text-decoration: none;
+}
+.advertisement>div{
+    text-decoration: none;
+    padding:10px;
+}
+.advertisement{
     width: 300px;
     height:300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.371);    
 }
 
 .img-advertisement{
-    max-width: 300px;
-    max-height:300px;
+    max-width: 280px;
+    max-height:200px;
 }

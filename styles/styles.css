@@ -39,23 +39,40 @@ h5 {
 /* Header */
 header {
     background-color: var(--third-color);
-    padding-bottom: 20px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navbar */
 nav {
     background-color: var(--second-color);
-    padding-bottom: 20px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    padding-right: 10px;
 }
 
 /* Main */
 main {
     background-color: var(--first-color);
-    padding-bottom: 20px;
+    height: 80vh;
+    overflow-y: scroll;
+
 }
+
 /* Footer */
 footer {
     background-color: var(--third-color);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 form#newUser,
@@ -86,9 +103,10 @@ footer>a {
 }
 
 /* Colores */
-.venta{
+.venta {
     color: green;
 }
-.compra{
+
+.compra {
     color: red;
 }

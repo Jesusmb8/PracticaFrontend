@@ -1,5 +1,6 @@
 import { pubSub } from "../pubSub.js";
 import { isEmailValid } from "../utils/isEmailValid.js";
+import { buildSpinnerView } from "../utils/spinner.js";
 import { loginModel } from "./loginModel.js";
 
 
@@ -17,6 +18,7 @@ export function loginController(loginForm) {
                 bgColor: 'bg-red'
             })
         } else {
+            loginForm.insertAdjacentHTML('afterbegin', buildSpinnerView());
             loginUser(loginForm);
         }
     })
@@ -30,7 +32,7 @@ async function loginUser(loginForm) {
     try {
         const token = await loginModel(user, pass);
         localStorage.setItem('token', token);
-        window.location= '/';
+        window.location = '/';
 
     } catch (error) {
         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {

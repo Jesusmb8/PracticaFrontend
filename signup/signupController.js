@@ -1,5 +1,6 @@
 import { pubSub } from "../pubSub.js";
 import { isEmailValid } from "../utils/isEmailValid.js";
+import { buildSpinnerView } from "../utils/spinner.js";
 import { createUser } from "./singupModel.js";
 
 export function signupController(singupForm) {
@@ -13,6 +14,7 @@ export function signupController(singupForm) {
         const passwConfirmElement = singupForm.querySelector('#passwordConfirm');
         if (isEmailValid(emailElement.value) &&
             isPasswordValid(passwElement.value, passwConfirmElement.value)) {
+                singupForm.insertAdjacentHTML('afterbegin', buildSpinnerView());
             try {
                 await createUser(emailElement.value, passwElement.value);
                 pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {

@@ -32,12 +32,14 @@ async function loginUser(loginForm) {
     try {
         const token = await loginModel(user, pass);
         localStorage.setItem('token', token);
-        window.location = '/';
 
     } catch (error) {
         pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, {
             message: error.message,
             bgColor: 'bg-red'
         })
+    } finally {
+        setTimeout(() => window.location = "/", 2000);
+
     }
 }

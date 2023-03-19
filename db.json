@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "username": "jesus@gmail.com",
+      "password": "$2b$10$ZVOW9yPFNaLRK2SZYop5MudYPV2Q9gyklcNplVAFCzwT1i4kF5z4e",
+      "id": 5
+    },
+    {
+      "username": "daniel@gmail.com",
+      "password": "$2b$10$cwc1//Cd7.svL8hP9UD5zue3sEefyujI1llMqmOI81K7Mn74V.Kxq",
+      "id": 6
+    },
+    {
+      "username": "jesus1@gmail.com",
+      "password": "$2b$10$cwc1//Cd7.svL8hP9UD5zuH873dU0SZ/chVN3H2nxYKyBEAMGl7CG",
+      "id": 7
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "$2b$10$ITR1WJ.c4STmwlcts.0wOe3U.67n7E1i98qu4yjVOeEthbWmKxuLK",
+      "id": 8
+    }
+  ],
+  "advertisement": [
+    {
+      "imagen": "https://cdn-images.motor.es/image/m/1280w.webp/fotos-noticias/2022/03/precio-bmw-x4-2022-202285566-1647078996_1.jpg",
+      "nombre": "BMW X4",
+      "descripcion": "Bmw X4, nuevo",
+      "precio": "30.000",
+      "tipo": "compra",
+      "userId": 6,
+      "updatedAt": "2023-03-18T12:32:44.033Z",
+      "id": "GJ08JaV"
+    },
+    {
+      "imagen": "https://www.razaoautomovel.com/wp-content/uploads/2020/06/2020_BMW_Serie_4_Coupe_72.jpg",
+      "nombre": "BMW serie 4",
+      "descripcion": "Serie 430d, con todos los extras",
+      "precio": "35.400",
+      "tipo": "venta",
+      "userId": 5,
+      "updatedAt": "2023-03-18T16:18:09.899Z",
+      "id": "Uj-BS8K"
+    },
+    {
+      "imagen": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61lKQWyMdDL._AC_SX522_.jpg",
+      "nombre": "iPhone 14",
+      "descripcion": "Iphone 14 256 Gb",
+      "precio": "1.100",
+      "tipo": "venta",
+      "userId": 5,
+      "updatedAt": "2023-03-19T11:36:45.681Z",
+      "id": "lHbk5ZT"
+    }
+  ]
+}
